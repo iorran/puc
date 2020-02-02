@@ -1,0 +1,55 @@
+
+entity Equipment {
+    name String
+}
+
+entity EquipmentMaintenance {
+	date ZonedDateTime
+	notes String
+}
+
+entity Dam {
+    name String
+    adress String
+}
+
+entity Sector {
+    name String
+}
+
+entity Task {
+    description String
+    start ZonedDateTime
+    end ZonedDateTime
+}
+
+entity Incident {
+    risk RiskType
+    notes TextBlob
+}
+
+enum RiskType {
+    HIGH,
+    MEDIUM,
+    LOWER
+}
+
+entity Action {
+    title String
+    description String
+    start ZonedDateTime
+    end ZonedDateTime
+}
+
+relationship OneToMany {
+    Dam{name} to Sector
+}
+
+relationship ManyToOne {
+    Task{description} to Sector,
+    Incident{name} to Task,
+	EquipmentMaintenance{name} to Equipment,
+    Action to Incident
+}
+
+paginate * with pagination
