@@ -1,0 +1,27 @@
+{
+    "name": "Equipment",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "equipmentMaintenance",
+            "otherEntityRelationshipName": "equipment",
+            "relationshipName": "maintenances"
+        }
+    ],
+    "changelogDate": "20200202162209",
+    "entityTableName": "equipment",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

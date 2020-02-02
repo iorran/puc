@@ -1,0 +1,44 @@
+{
+    "name": "Incident",
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "risk",
+            "fieldType": "RiskType",
+            "fieldValues": "HIGH,MEDIUM,LOWER"
+        },
+        {
+            "fieldName": "notes",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "action",
+            "otherEntityRelationshipName": "incident",
+            "relationshipName": "actions"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "task",
+            "otherEntityRelationshipName": "incidents",
+            "relationshipName": "task",
+            "otherEntityField": "title"
+        }
+    ],
+    "changelogDate": "20200202162214",
+    "entityTableName": "incident",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

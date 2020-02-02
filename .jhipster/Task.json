@@ -1,0 +1,46 @@
+{
+    "name": "Task",
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "start",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "end",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "incident",
+            "otherEntityRelationshipName": "task",
+            "relationshipName": "incidents"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "sector",
+            "otherEntityRelationshipName": "tasks",
+            "relationshipName": "sector",
+            "otherEntityField": "name"
+        }
+    ],
+    "changelogDate": "20200202162213",
+    "entityTableName": "task",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

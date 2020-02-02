@@ -1,0 +1,11 @@
+id;title;risk;notes
+1;hacking;HIGH;../fake-data/blob/hipster.txt
+2;bypassing;HIGH;../fake-data/blob/hipster.txt
+3;bandwidth;MEDIUM;../fake-data/blob/hipster.txt
+4;Falkland Islands (Malvinas);HIGH;../fake-data/blob/hipster.txt
+5;mobile invoice Metal;HIGH;../fake-data/blob/hipster.txt
+6;Handmade Granite Ball Legacy;LOWER;../fake-data/blob/hipster.txt
+7;withdrawal Antarctica (the territory South of 60 deg S);LOWER;../fake-data/blob/hipster.txt
+8;bleeding-edge;LOWER;../fake-data/blob/hipster.txt
+9;mobile;HIGH;../fake-data/blob/hipster.txt
+10;Handcrafted Concrete Gloves platforms;MEDIUM;../fake-data/blob/hipster.txt

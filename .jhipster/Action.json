@@ -1,0 +1,40 @@
+{
+    "name": "Action",
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "start",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "end",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "incident",
+            "otherEntityRelationshipName": "actions",
+            "relationshipName": "incident",
+            "otherEntityField": "title"
+        }
+    ],
+    "changelogDate": "20200202162215",
+    "entityTableName": "action",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

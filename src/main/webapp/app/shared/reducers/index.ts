@@ -11,6 +11,34 @@ import activate, { ActivateState } from 'app/modules/account/activate/activate.r
 import password, { PasswordState } from 'app/modules/account/password/password.reducer';
 import settings, { SettingsState } from 'app/modules/account/settings/settings.reducer';
 import passwordReset, { PasswordResetState } from 'app/modules/account/password-reset/password-reset.reducer';
+// prettier-ignore
+import equipment, {
+  EquipmentState
+} from 'app/entities/equipment/equipment.reducer';
+// prettier-ignore
+import equipmentMaintenance, {
+  EquipmentMaintenanceState
+} from 'app/entities/equipment-maintenance/equipment-maintenance.reducer';
+// prettier-ignore
+import dam, {
+  DamState
+} from 'app/entities/dam/dam.reducer';
+// prettier-ignore
+import sector, {
+  SectorState
+} from 'app/entities/sector/sector.reducer';
+// prettier-ignore
+import task, {
+  TaskState
+} from 'app/entities/task/task.reducer';
+// prettier-ignore
+import incident, {
+  IncidentState
+} from 'app/entities/incident/incident.reducer';
+// prettier-ignore
+import action, {
+  ActionState
+} from 'app/entities/action/action.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -23,6 +51,13 @@ export interface IRootState {
   readonly passwordReset: PasswordResetState;
   readonly password: PasswordState;
   readonly settings: SettingsState;
+  readonly equipment: EquipmentState;
+  readonly equipmentMaintenance: EquipmentMaintenanceState;
+  readonly dam: DamState;
+  readonly sector: SectorState;
+  readonly task: TaskState;
+  readonly incident: IncidentState;
+  readonly action: ActionState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -37,6 +72,13 @@ const rootReducer = combineReducers<IRootState>({
   passwordReset,
   password,
   settings,
+  equipment,
+  equipmentMaintenance,
+  dam,
+  sector,
+  task,
+  incident,
+  action,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });

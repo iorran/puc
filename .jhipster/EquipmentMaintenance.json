@@ -1,0 +1,32 @@
+{
+    "name": "EquipmentMaintenance",
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "notes",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "equipment",
+            "otherEntityRelationshipName": "maintenances",
+            "relationshipName": "equipment",
+            "otherEntityField": "name"
+        }
+    ],
+    "changelogDate": "20200202162210",
+    "entityTableName": "equipment_maintenance",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

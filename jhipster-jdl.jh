@@ -18,12 +18,14 @@ entity Sector {
 }
 
 entity Task {
+    title String
     description String
     start ZonedDateTime
     end ZonedDateTime
 }
 
 entity Incident {
+    title String
     risk RiskType
     notes TextBlob
 }
@@ -42,14 +44,11 @@ entity Action {
 }
 
 relationship OneToMany {
-    Dam{name} to Sector
-}
-
-relationship ManyToOne {
-    Task{description} to Sector,
-    Incident{name} to Task,
-	EquipmentMaintenance{name} to Equipment,
-    Action to Incident
+    Dam{sectors} to Sector{dam(name)}
+    Sector{tasks} to Task{sector(name)}
+    Task{incidents} to Incident{task(title)}
+    Incident{actions} to Action{incident(title)}
+    Equipment{maintenances} to EquipmentMaintenance{equipment(name)}
 }
 
 paginate * with pagination
