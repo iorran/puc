@@ -17,6 +17,24 @@ entity Sector {
     name String
 }
 
+entity Sensor {
+    tag String
+    latitude Integer
+    longitude Integer
+    maxHeight Double
+    maxVolume Double
+    maxHumidity Double
+    maxPressure Double
+}
+
+entity Readings {
+    readBy String
+    height Double
+    volume Double
+    humidity Double
+    pressure Double
+}
+
 entity Task {
     title String
     description String
@@ -49,6 +67,8 @@ relationship OneToMany {
     Task{incidents} to Incident{task(title)}
     Incident{actions} to Action{incident(title)}
     Equipment{maintenances} to EquipmentMaintenance{equipment(name)}
+    Sector{sensors} to Sensor{sector(name)}
+    Sensor{readings} to Readings{sensor(tag)}
 }
 
 paginate * with pagination

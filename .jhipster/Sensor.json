@@ -1,0 +1,58 @@
+{
+    "name": "Sensor",
+    "fields": [
+        {
+            "fieldName": "tag",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "latitude",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "longitude",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "maxHeight",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "maxVolume",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "maxHumidity",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "maxPressure",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "readings",
+            "otherEntityRelationshipName": "sensor",
+            "relationshipName": "readings"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "sector",
+            "otherEntityRelationshipName": "sensors",
+            "relationshipName": "sector",
+            "otherEntityField": "name"
+        }
+    ],
+    "changelogDate": "20200302232240",
+    "entityTableName": "sensor",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

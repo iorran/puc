@@ -1,0 +1,44 @@
+{
+    "name": "Readings",
+    "fields": [
+        {
+            "fieldName": "readBy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "height",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "volume",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "humidity",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "pressure",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "sensor",
+            "otherEntityRelationshipName": "readings",
+            "relationshipName": "sensor",
+            "otherEntityField": "tag"
+        }
+    ],
+    "changelogDate": "20200302232241",
+    "entityTableName": "readings",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

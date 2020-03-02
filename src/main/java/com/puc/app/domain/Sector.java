@@ -26,6 +26,9 @@ public class Sector implements Serializable {
     @OneToMany(mappedBy = "sector")
     private Set<Task> tasks = new HashSet<>();
 
+    @OneToMany(mappedBy = "sector")
+    private Set<Sensor> sensors = new HashSet<>();
+
     @ManyToOne
     @JsonIgnoreProperties("sectors")
     private Dam dam;
@@ -75,6 +78,31 @@ public class Sector implements Serializable {
 
     public void setTasks(Set<Task> tasks) {
         this.tasks = tasks;
+    }
+
+    public Set<Sensor> getSensors() {
+        return sensors;
+    }
+
+    public Sector sensors(Set<Sensor> sensors) {
+        this.sensors = sensors;
+        return this;
+    }
+
+    public Sector addSensors(Sensor sensor) {
+        this.sensors.add(sensor);
+        sensor.setSector(this);
+        return this;
+    }
+
+    public Sector removeSensors(Sensor sensor) {
+        this.sensors.remove(sensor);
+        sensor.setSector(null);
+        return this;
+    }
+
+    public void setSensors(Set<Sensor> sensors) {
+        this.sensors = sensors;
     }
 
     public Dam getDam() {

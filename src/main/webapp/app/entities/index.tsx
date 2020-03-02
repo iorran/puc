@@ -11,6 +11,8 @@ import Sector from './sector';
 import Task from './task';
 import Incident from './incident';
 import Action from './action';
+import Sensor from './sensor';
+import Readings from './readings';
 /* jhipster-needle-add-route-import - JHipster will add routes here */
 
 const Routes = ({ match }) => (
@@ -24,6 +26,8 @@ const Routes = ({ match }) => (
       <ErrorBoundaryRoute path={`${match.url}task`} component={Task} />
       <ErrorBoundaryRoute path={`${match.url}incident`} component={Incident} />
       <ErrorBoundaryRoute path={`${match.url}action`} component={Action} />
+      <ErrorBoundaryRoute path={`${match.url}sensor`} component={Sensor} />
+      <ErrorBoundaryRoute path={`${match.url}readings`} component={Readings} />
       {/* jhipster-needle-add-route-path - JHipster will add routes here */}
     </Switch>
   </div>

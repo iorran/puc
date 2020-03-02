@@ -39,6 +39,14 @@ import incident, {
 import action, {
   ActionState
 } from 'app/entities/action/action.reducer';
+// prettier-ignore
+import sensor, {
+  SensorState
+} from 'app/entities/sensor/sensor.reducer';
+// prettier-ignore
+import readings, {
+  ReadingsState
+} from 'app/entities/readings/readings.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -58,6 +66,8 @@ export interface IRootState {
   readonly task: TaskState;
   readonly incident: IncidentState;
   readonly action: ActionState;
+  readonly sensor: SensorState;
+  readonly readings: ReadingsState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -79,6 +89,8 @@ const rootReducer = combineReducers<IRootState>({
   task,
   incident,
   action,
+  sensor,
+  readings,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });

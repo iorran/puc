@@ -21,11 +21,15 @@
     <include file="config/liquibase/changelog/20200202162213_added_entity_Task.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200202162214_added_entity_Incident.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200202162215_added_entity_Action.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200302232240_added_entity_Sensor.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200302232241_added_entity_Readings.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20200202162210_added_entity_constraints_EquipmentMaintenance.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200202162212_added_entity_constraints_Sector.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200202162213_added_entity_constraints_Task.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200202162214_added_entity_constraints_Incident.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20200202162215_added_entity_constraints_Action.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200302232241_added_entity_constraints_Readings.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20200302232240_added_entity_constraints_Sensor.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

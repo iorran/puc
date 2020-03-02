@@ -14,6 +14,12 @@
             "relationshipName": "tasks"
         },
         {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "sensor",
+            "otherEntityRelationshipName": "sector",
+            "relationshipName": "sensors"
+        },
+        {
             "relationshipType": "many-to-one",
             "otherEntityName": "dam",
             "otherEntityRelationshipName": "sectors",
